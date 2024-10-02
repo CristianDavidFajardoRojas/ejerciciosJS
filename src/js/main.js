@@ -38,5 +38,27 @@ const numerosSeparadosYSuma = () => {
         sumNums += Number(numero);
     })
     console.log(`La suma de todos los números es: ${sumNums}`)
+
 }
-numerosSeparadosYSuma();
+//numerosSeparadosYSuma();
+
+
+
+
+// **Contiene elementos**
+// - Crear un programa que permite ingresar valores separados por espacios, y luego preguntar qué valor se desea averiguar si existe. El programa debe devolver un mensaje diciendo si dicho valor se encuentra dentro de los valores originales o no. Ejemplo:
+
+const numerosSeparadosYSiExiste = () => {
+    let numeros = prompt("Ingrese los numeros separados por espacios: ");
+    let numeroBuscar = prompt("Ingrese valor a buscar: ");
+    let numeroExiste = false;
+    let listaNumeros = numeros.split(' ');
+    listaNumeros.forEach(numero => {
+        if(numeroBuscar == numero)numeroExiste = true
+    })
+    if(numeroExiste == true){ 
+    console.log(`El valor ${numeroBuscar} se encuentra entre los valores originales.`)
+    }else console.log(`El valor ${numeroBuscar} NO se encuentra entre los valores originales.`)
+}
+numerosSeparadosYSiExiste()
+
