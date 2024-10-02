@@ -60,5 +60,25 @@ const numerosSeparadosYSiExiste = () => {
     console.log(`El valor ${numeroBuscar} se encuentra entre los valores originales.`)
     }else console.log(`El valor ${numeroBuscar} NO se encuentra entre los valores originales.`)
 }
-numerosSeparadosYSiExiste()
+//numerosSeparadosYSiExiste()
+
+
+
+// **Encontrar índice**
+// - Crear un programa que permite ingresar valores separados por espacios, y luego preguntar qué valor se desea encontrar el índice. El programa debe devolver un mensaje con el índice del primer elemento que sea igual al buscado, o indicar si no se ha encontrado. Ejemplo:
+
+function encontrarIndice() {
+    const valores = prompt("Ingrese valores separados por espacios:").split(" ");
+    const valorBuscado = prompt("Ingrese valor a buscar:");
+    const indice = valores.indexOf(valorBuscado);
+
+    if (indice !== -1) {
+        alert(`El valor ${valorBuscado} se encuentra en el índice ${indice}`);
+    } else {
+        alert(`El valor ${valorBuscado} no se encuentra en la lista`);
+    }
+}
+
+//encontrarIndice();
+
 
