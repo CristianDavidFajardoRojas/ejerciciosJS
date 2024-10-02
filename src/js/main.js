@@ -25,3 +25,18 @@ const numerosSeparadosYMenor = () => {
     console.log(`El numero menor es: ${numMenor}`)
 }
 //numerosSeparadosYMenor();
+
+
+// **Suma de todos los números**
+// - Crear un programa que pida ingresar números separados por espacios y devuelva un mensaje con la suma de todos los números. Ejemplo:
+
+const numerosSeparadosYSuma = () => {
+    let numeros = prompt("Ingrese los numeros separados por espacios: ");
+    let listaNumeros = numeros.split(' ');
+    let sumNums = 0;
+    listaNumeros.forEach(numero => {
+        sumNums += Number(numero);
+    })
+    console.log(`La suma de todos los números es: ${sumNums}`)
+}
+numerosSeparadosYSuma();
