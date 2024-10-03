@@ -82,3 +82,23 @@ function encontrarIndice() {
 //encontrarIndice();
 
 
+
+// **Sam y Frodo**
+// - Crear un programa que permita saber si Sam y Frodo están juntos. El programa debe permitir ingresar nombres separados por espacios, y mostrar con un mensaje si Sam se encuentra al lado de Frodo, ya sea antes o después. Ejemplo:
+
+
+const nombresSeparadosYSamYFrodo = () => {
+    let nombres = prompt("Ingrese los nombres separados por espacios: ");
+    let FrodoASalvo = false;
+    let listaNombre = nombres.split(' ');
+    listaNombre.forEach( (nombre, index) => {
+        if(listaNombre[index] == "Frodo" && (listaNombre[index + 1] == "Sam" || listaNombre[index - 1] == "Sam"))FrodoASalvo = true;
+    })
+
+    if (FrodoASalvo == true){console.log('Sam y Frodo están juntos, ¡Frodo está a salvo!')}else{  console.log('Sam y Frodo están separados, ¡Frodo está en peligro!')}
+
+}
+
+// nombresSeparadosYSamYFrodo()
+
+
