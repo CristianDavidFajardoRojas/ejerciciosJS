@@ -102,3 +102,29 @@ const nombresSeparadosYSamYFrodo = () => {
 // nombresSeparadosYSamYFrodo()
 
 
+// **Frutas**
+// - Crear un programa que pida ingresar 🍎, 🍐y 🍑 y devuelva un mensaje con la cantidad que hay de cada una. Ejemplo:
+
+
+const frutasYCantidad = () => {
+    let frutas = prompt("Ingrese las frutas separas por espacios 🍎, 🍐 y 🍑 : ");
+    let manzanas = 0;
+    let peras = 0;
+    let duraznos = 0;
+    let listaFrutas = frutas.split(' ');
+    console.log(listaFrutas)                                                                  
+    listaFrutas.forEach(fruta => {  
+        if(fruta == '🍎')manzanas += 1;
+        if(fruta == '🍐')peras += 1;
+        if(fruta == '🍑')duraznos += 1;
+    })
+
+    console.log(`Hay ${manzanas} 🍎, ${peras} 🍐 y ${duraznos} 🍑`)
+
+}
+frutasYCantidad();
+
+
+
+
+
