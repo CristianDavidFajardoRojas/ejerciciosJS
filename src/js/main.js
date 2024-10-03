@@ -166,10 +166,27 @@ const perrosYGatos = () => {
     })
     console.log(perros, gatos)
 }
-perrosYGatos()
+// perrosYGatos()
 
 
 
+
+// **Chat**
+// - Crear un programa que dado una lista de nombres de usuarias separadas por espacios, muestre un mensaje con el status del chat. Las reglas son:
+
+// - Para una usuaria, debe mostrar: `nombre usuaria + está conectada`
+// - Para dos usuarias, debe mostrar: `nombre usuaria 1 + y +  nombre usuaria 2 + están conectadas`
+// - Para más de dos usuarias, debe mostrar: `nombre usuaria 1, nombre usuaria 2 + y X persona(s) más están conectadas`
+
+
+const chat = () => {
+    let nombresUsuarias = prompt("Ingrese nombres de usuarias: ");
+    let listaNombresUsuarias = nombresUsuarias.split(' ');                                                                 
+    if(listaNombresUsuarias.length == 1) console.log(`${listaNombresUsuarias[0]} está conectada`)
+    else if(listaNombresUsuarias.length == 2) console.log(`${listaNombresUsuarias[0]} y ${listaNombresUsuarias[1]} están conectadas`)
+    else console.log(`${listaNombresUsuarias[0]}, ${listaNombresUsuarias[1]} y ${listaNombresUsuarias.length - 2} persona(s) más están conectadas`)
+}
+chat()
 
 
 
