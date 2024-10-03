@@ -122,7 +122,32 @@ const frutasYCantidad = () => {
     console.log(`Hay ${manzanas} 🍎, ${peras} 🍐 y ${duraznos} 🍑`)
 
 }
-frutasYCantidad();
+// frutasYCantidad();
+
+
+
+// **Comida para monos**
+// - Crear un programa que permita ingresar una lista de 🐵(monos) y **🍌**(bananas). Preguntar luego cuántas bananas come cada mono. Mostrar en un mensaje si hay suficientes bananas para cada mono. Ejemplo:
+
+const comidaParaMonos = () => {
+    let monosybananas = prompt("Ingrese monos y bananas 🐵 🍌 : ");
+    let bananaPorMono = prompt("Cuántas bananas come cada mono?:");
+    let monos = 0;
+    let bananas = 0;
+    let listamonosybananas = monosybananas.split(' ');
+    console.log(listamonosybananas)                                                                 
+    listamonosybananas.forEach(monos_bananas => {  
+        if(monos_bananas == '🐵')monos += 1;
+        if(monos_bananas == '🍌')bananas += 1;
+    })
+
+    if(bananas !== 0 ){
+        if((bananas / Number(bananaPorMono)) >= monos )console.log('¡Si hay suficientes bananas para los monos! 🐵🍌')
+        else console.log('¡Oh no!¡No hay suficientes bananas para los monos! 😭')
+    }
+
+}
+comidaParaMonos()
 
 
 
