@@ -147,7 +147,28 @@ const comidaParaMonos = () => {
     }
 
 }
-comidaParaMonos()
+// comidaParaMonos()
+
+
+
+// **Perros y gatos**
+// - Crear un programa que permita ingresar perros y gatos y devuelva un mensaje con los perros agrupados por un lado y los gatos por otro. Ejemplo:
+
+
+const perrosYGatos = () => {
+    let animales = prompt("Ingrese las frutas separas por espacios 🐶 🐱: ");
+    let perros = '';
+    let gatos = '';
+    let listaAnimales = animales.split(' ');                                                                 
+    listaAnimales.forEach(fruta => {  
+        if(fruta == '🐶')perros += '🐶';
+        if(fruta == '🐱')gatos += '🐱';
+    })
+    console.log(perros, gatos)
+}
+perrosYGatos()
+
+
 
 
 
